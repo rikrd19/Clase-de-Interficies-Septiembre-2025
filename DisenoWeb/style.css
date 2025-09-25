@@ -1,21 +1,50 @@
 
+.logo{
+  position: fixed;
+  top: 12px;                 /* distancia al borde superior */
+  left: 12px;                /* distancia al borde izquierdo */
+  width: clamp(56px,8vw,72px);
+  z-index: 1000;             /* por encima del contenido */
+  pointer-events: none;      /* no tapa clicks del header */
+  /* Opcional: chapa blanca para contraste */
+  /* background:#fff; padding:6px; border-radius:12px; */
+  @media (min-width:768px){.logo-Cat{top:18px;left:18px}}
+}
+
+/* Si tu marco exterior es grueso, aumenta un poco el offset */
+@media (min-width: 768px){
+  .corner-logo{ top: 18px; left: 18px; }
+}
+
+.flag-faded{
+  display:block;
+  max-width:300px;
+  width:100%;
+  margin:12px auto 18px;
+  border-radius:18px;
+  /* opacity:.35;              atenuado */
+  filter:saturate(.9);      /* opcional */
+}
 
 body{
 font-family: Arial, Helvetica, sans-serif;
-background-color: #f2f2f2;
+background-color: hsl(54, 100%, 83%);
 color: #333;
-margin: 10;
-padding: 20px;
+margin: 50;
+padding: 5%;
 
 }
 
 header{
-    background-color: #4CAF50;
+    background-color: hwb(45 13% 29%);
+    border-radius: 30%;
     color: white;
     padding: 15px;
     text-align: center;
 
 }
-p{
-    font-size: 20px;
+.fondo-senyera{
+   --amarillo: #F2C200;  /* dorado vivo */
+  --rojo:     #BF1E2E;  /* rojo intenso */
+  --altoFranja: 12px;   /* grosor de cada franja */
 }
